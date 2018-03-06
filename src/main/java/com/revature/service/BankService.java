@@ -40,7 +40,7 @@ public class BankService {
 	String savedUsername = "";
 	String savedPassword = "";
 	String name = "";
-	int balance = 0;
+	double balance = 0;
 
 	user.setName(name);
 	user.setUsername(savedUsername);
@@ -50,12 +50,12 @@ public class BankService {
 	return user;
     }
 
-    public int getBalance(User user) {
+    public double getBalance(User user) {
 	logger.info("Getting balance");
 	return user.getBalance();
     }
 
-    public void deposit(User user, int amount) {
+    public void deposit(User user, double amount) {
 	try {
 	    if (amount > 0) {
 		user.setBalance(user.getBalance() + amount);
@@ -71,7 +71,7 @@ public class BankService {
 	}
     }
 
-    public void widthdraw(User user, int widthdraw) {
+    public void widthdraw(User user, double widthdraw) {
 	try {
 	    if (widthdraw < 0) {
 		throw new IllegalWidthdrawlException("Cannot widthdraw negative amount");

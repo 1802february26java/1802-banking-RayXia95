@@ -9,7 +9,7 @@ public class User implements Serializable {
      */
     private static final long serialVersionUID = -266883596469560180L;
 
-    private int balance;
+    private double balance;
     private String name;
     private transient String password;
     private String username;
@@ -18,10 +18,11 @@ public class User implements Serializable {
 
     }
 
-    public User(String name, String username, String password) {
+    public User(String name, String username, String password, double balance) {
 	this.name = name;
 	this.password = password;
 	this.username = username;
+	this.balance = balance;
     }
 
     public String getName() {
@@ -32,7 +33,7 @@ public class User implements Serializable {
 	this.name = name;
     }
 
-    public int getBalance() {
+    public double getBalance() {
 	return balance;
     }
 
@@ -52,15 +53,17 @@ public class User implements Serializable {
 	this.password = password;
     }
 
-    public void setBalance(int balance) {
-	this.balance = balance;
+    public void setBalance(double d) {
+	this.balance = d;
     }
 
     @Override
     public int hashCode() {
 	final int prime = 31;
 	int result = 1;
-	result = prime * result + balance;
+	long temp;
+	temp = Double.doubleToLongBits(balance);
+	result = prime * result + (int) (temp ^ (temp >>> 32));
 	result = prime * result + ((name == null) ? 0 : name.hashCode());
 	result = prime * result + ((username == null) ? 0 : username.hashCode());
 	return result;
@@ -78,7 +81,7 @@ public class User implements Serializable {
 	    return false;
 	}
 	User other = (User) obj;
-	if (balance != other.balance) {
+	if (Double.doubleToLongBits(balance) != Double.doubleToLongBits(other.balance)) {
 	    return false;
 	}
 	if (name == null) {

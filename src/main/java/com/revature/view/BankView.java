@@ -16,9 +16,9 @@ public class BankView {
 	return input.nextLine();
     }
 
-    public void getBalance(int balance) {
+    public void getBalance(double d) {
 	System.out.println("Your Balance is: ");
-	System.out.println(balance);
+	System.out.println(d);
     }
 
     public int widthdraw() {
