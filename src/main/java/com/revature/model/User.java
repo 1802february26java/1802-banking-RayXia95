@@ -14,14 +14,11 @@ public class User implements Serializable {
     private transient String password;
     private String username;
 
-    public User(int balance, String password, String username) {
-	this.balance = balance;
-	this.password = password;
-	this.username = username;
+    public User() {
+
     }
 
-    public User(int balance, String name, String password, String username) {
-	this.balance = balance;
+    public User(String name, String username, String password) {
 	this.name = name;
 	this.password = password;
 	this.username = username;

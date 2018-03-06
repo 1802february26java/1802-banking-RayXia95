@@ -1,47 +1,28 @@
-package com.revature.controller;
+package com.revature.service;
 
+import org.apache.log4j.Logger;
+
+import com.revature.controller.BankController;
 import com.revature.exception.DepositByZeroOrLessException;
 import com.revature.exception.InsufficientFundException;
 import com.revature.model.User;
-import com.revature.repository.BankView;
-import com.revature.service.BankService;
 
-public class BankController {
+public class BankService {
 
-    private User user;
-    private BankView bankView;
-    private BankService bankService;
+    Logger log = Logger.getLogger(BankController.class);
 
-    public BankController(User user, BankView bankView) {
-	this.user = user;
-	this.bankView = bankView;
-    }
-
-    public void login() {
-
-	String username = bankView.inputUsername();
-	String password = bankView.inputPassword();
-
-	/**
-	 * SQL to get user
-	 */
-	User user = new User();
-	if (bankService.authenicateUser(user, username, password)) {
-	    bankView.login();
-	    this.user = user;
+    public boolean authenicateUser(User user, String username, String password) {
+	if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+	    log.info("User has sucessfully logged in");
+	    return true;
 	}
-	else {
-	    bankView.invalidCredentials();
-	}
-    }
 
-    public void logout() {
-	bankView.logout();
-	user = null;
+	return false;
     }
 
     public int getBalance(User user) {
 
+	log.info("Your Balance is: " + user.getBalance());
 	return user.getBalance();
 
     }
@@ -84,5 +65,4 @@ public class BankController {
 	log.info("User has successfully logged out");
 	return;
     }
-
 }
