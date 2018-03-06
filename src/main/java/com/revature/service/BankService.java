@@ -1,30 +1,49 @@
 package com.revature.service;
 
-import org.apache.log4j.Logger;
-
-import com.revature.controller.BankController;
 import com.revature.exception.DepositByZeroOrLessException;
 import com.revature.exception.InsufficientFundException;
+import com.revature.exception.InvalidCredentials;
 import com.revature.model.User;
 
 public class BankService {
 
-    Logger log = Logger.getLogger(BankController.class);
+    public void authenicateUser(User user, String username, String password) {
+	try {
+	    if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+	    }
+	    else {
+		throw new InvalidCredentials("Username or password is incorrect");
+	    }
+	}
+	catch (InvalidCredentials e) {
 
-    public boolean authenicateUser(User user, String username, String password) {
-	if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-	    log.info("User has sucessfully logged in");
-	    return true;
 	}
 
-	return false;
+    }
+
+    public User getUserFromDB(String username, String password) {
+	/**
+	 * SQL to get user
+	 */
+	User user = new User();
+	// String savedUsername = SELECT username FROM User WHERE username="username"
+	// String savedPassword = SELECT password FROM User WHERE password="password"
+	// String name = SELECT name FROM User WHERE username="username"
+	// int balance = SELECT balance FROM User WHERE username="username"
+	String savedUsername = "";
+	String savedPassword = "";
+	String name = "";
+	int balance = 0;
+
+	user.setName(name);
+	user.setUsername(savedUsername);
+	user.setPassword(savedPassword);
+	user.setBalance(balance);
+	return user;
     }
 
     public int getBalance(User user) {
-
-	log.info("Your Balance is: " + user.getBalance());
 	return user.getBalance();
-
     }
 
     public void deposit(User user, int amount) {
@@ -38,31 +57,27 @@ public class BankService {
 
 	}
 	catch (DepositByZeroOrLessException e) {
-	    log.warn("You gotta have money to put in");
+
 	}
     }
 
-    public int widthdraw(User user, int widthdraw) {
+    public void widthdraw(User user, int widthdraw) {
 	try {
 	    if (user.getBalance() >= widthdraw) {
 		user.setBalance(user.getBalance() - widthdraw);
 	    }
 	    else {
 		throw new InsufficientFundException(
-			"Too Broke you need more money in your account");
+			"Too broke you need more money in your account");
 	    }
-
 	}
 	catch (InsufficientFundException e) {
-	    log.warn("You can not widthdraw that amount!");
+
 	}
 
-	return user.getBalance();
     }
 
     public void logout(User user) {
 	user = null;
-	log.info("User has successfully logged out");
-	return;
     }
 }

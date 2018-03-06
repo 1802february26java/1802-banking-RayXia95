@@ -2,25 +2,23 @@ package com.revature.repository;
 
 import java.util.Scanner;
 
-import com.revature.model.User;
-
 public class BankView {
 
     private Scanner input = new Scanner(System.in);
 
-    public String inputUsername() {
+    public String getUsername() {
 	System.out.println("Please enter your username ");
 	return input.nextLine();
     }
 
-    public String inputPassword() {
+    public String getPassword() {
 	System.out.println("Please enter your password ");
 	return input.nextLine();
     }
 
-    public void getBalance(User user) {
+    public void getBalance(int balance) {
 	System.out.println("Your Balance is: ");
-	System.out.println(user.getBalance());
+	System.out.println(balance);
     }
 
     public int widthdraw() {
