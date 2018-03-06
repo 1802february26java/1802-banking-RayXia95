@@ -3,8 +3,8 @@ package com.revature.controller;
 import org.apache.log4j.Logger;
 
 import com.revature.model.User;
-import com.revature.repository.BankView;
 import com.revature.service.BankService;
+import com.revature.view.BankView;
 
 public class BankController {
 
@@ -17,6 +17,7 @@ public class BankController {
 	this.user = user;
 	this.bankService = bankService;
 	this.bankView = bankView;
+	logger.info("Ininitalized Controller");
     }
 
     public void widthdraw() {
