@@ -2,7 +2,6 @@ package com.revature.service;
 
 import org.apache.log4j.Logger;
 
-import com.revature.Main;
 import com.revature.exception.DepositByZeroOrLessException;
 import com.revature.exception.IllegalWidthdrawlException;
 import com.revature.exception.InsufficientFundException;
@@ -11,19 +10,19 @@ import com.revature.model.User;
 
 public class BankService {
 
-    private static Logger logger = Logger.getLogger(Main.class);
+    private static final Logger logger = Logger.getLogger(BankService.class);
 
     public void authenicateUser(User user, String username, String password) {
 	try {
 	    if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-		logger.info("Username and passwod is correct. User validated");
+		logger.info("Username and password is correct. User validated");
 	    }
 	    else {
 		throw new InvalidCredentials("Username or password is incorrect");
 	    }
 	}
 	catch (InvalidCredentials e) {
-	    logger.warn(e);
+	    logger.error(e);
 	}
 
     }
@@ -47,7 +46,7 @@ public class BankService {
 	user.setUsername(savedUsername);
 	user.setPassword(savedPassword);
 	user.setBalance(balance);
-	logger.info("Succesfully gotten user from DB");
+	logger.info("Successfully gotten user from DB");
 	return user;
     }
 
@@ -68,7 +67,7 @@ public class BankService {
 
 	}
 	catch (DepositByZeroOrLessException e) {
-	    logger.warn(e);
+	    logger.error(e);
 	}
     }
 
@@ -87,10 +86,10 @@ public class BankService {
 	    }
 	}
 	catch (IllegalWidthdrawlException e) {
-	    logger.warn(e);
+	    logger.error(e);
 	}
 	catch (InsufficientFundException e) {
-	    logger.warn(e);
+	    logger.error(e);
 	}
 
     }

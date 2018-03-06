@@ -1,3 +1,16 @@
-2018-03-06 15:22:37 WARN  Main:86 - com.revature.exception.InsufficientFundException: Too broke you need more money in your account
-2018-03-06 15:32:07 WARN  Main:90 - com.revature.exception.IllegalWidthdrawlException: Canno widthdraw negative amount
-2018-03-06 15:32:43 WARN  Main:93 - com.revature.exception.InsufficientFundException: Too broke, you need more money in your account
+2018-03-06 17:31:47 INFO  BankController:20 - Initialized Controller
+2018-03-06 17:31:47 INFO  BankService:49 - Successfully gotten user from DB
+2018-03-06 17:31:52 INFO  BankService:18 - Username and password is correct. User validated
+2018-03-06 17:31:52 INFO  BankController:43 - Successfully logged in
+2018-03-06 17:31:52 INFO  BankService:54 - Getting balance
+2018-03-06 17:31:52 INFO  BankController:30 - Got balance of account
+2018-03-06 17:31:54 INFO  BankService:62 - Successfully added balance
+2018-03-06 17:31:54 INFO  BankController:35 - Deposited money in bank account
+2018-03-06 17:31:54 INFO  BankService:54 - Getting balance
+2018-03-06 17:31:54 INFO  BankController:30 - Got balance of account
+2018-03-06 17:31:56 INFO  BankService:81 - Successfully minus balance
+2018-03-06 17:31:56 INFO  BankController:25 - withdrew money
+2018-03-06 17:31:56 INFO  BankService:54 - Getting balance
+2018-03-06 17:31:56 INFO  BankController:30 - Got balance of account
+2018-03-06 17:31:56 INFO  BankService:99 - User does not exist anymore and logged off
+2018-03-06 17:31:56 INFO  BankController:49 - Successfully logged out

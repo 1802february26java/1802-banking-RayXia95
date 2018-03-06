@@ -2,7 +2,6 @@ package com.revature.controller;
 
 import org.apache.log4j.Logger;
 
-import com.revature.Main;
 import com.revature.model.User;
 import com.revature.service.BankService;
 import com.revature.view.BankView;
@@ -12,18 +11,18 @@ public class BankController {
     private User user;
     private BankView bankView;
     private BankService bankService;
-    private static Logger logger = Logger.getLogger(Main.class);
+    private static final Logger logger = Logger.getLogger(BankController.class);
 
     public BankController(User user, BankService bankService, BankView bankView) {
 	this.user = user;
 	this.bankService = bankService;
 	this.bankView = bankView;
-	logger.info("Ininitalized Controller");
+	logger.info("Initialized Controller");
     }
 
     public void widthdraw() {
 	bankService.widthdraw(user, bankView.widthdraw());
-	logger.info("widthdrew money");
+	logger.info("withdrew money");
     }
 
     public void getBalance() {
@@ -47,7 +46,7 @@ public class BankController {
     public void logout() {
 	user = bankService.logout(user);
 	bankView.logout();
-	logger.info("Succesffuly logged out");
+	logger.info("Successfully logged out");
     }
 
 }
