@@ -1,0 +1,3 @@
+2018-03-06 15:22:37 WARN  Main:86 - com.revature.exception.InsufficientFundException: Too broke you need more money in your account
+2018-03-06 15:32:07 WARN  Main:90 - com.revature.exception.IllegalWidthdrawlException: Canno widthdraw negative amount
+2018-03-06 15:32:43 WARN  Main:93 - com.revature.exception.InsufficientFundException: Too broke, you need more money in your account

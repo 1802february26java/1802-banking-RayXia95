@@ -1,22 +1,29 @@
 package com.revature.service;
 
+import org.apache.log4j.Logger;
+
+import com.revature.Main;
 import com.revature.exception.DepositByZeroOrLessException;
+import com.revature.exception.IllegalWidthdrawlException;
 import com.revature.exception.InsufficientFundException;
 import com.revature.exception.InvalidCredentials;
 import com.revature.model.User;
 
 public class BankService {
 
+    private static Logger logger = Logger.getLogger(Main.class);
+
     public void authenicateUser(User user, String username, String password) {
 	try {
 	    if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+		logger.info("Username and passwod is correct. User validated");
 	    }
 	    else {
 		throw new InvalidCredentials("Username or password is incorrect");
 	    }
 	}
 	catch (InvalidCredentials e) {
-
+	    logger.warn(e);
 	}
 
     }
@@ -30,6 +37,7 @@ public class BankService {
 	// String savedPassword = SELECT password FROM User WHERE password="password"
 	// String name = SELECT name FROM User WHERE username="username"
 	// int balance = SELECT balance FROM User WHERE username="username"
+	// myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com
 	String savedUsername = "";
 	String savedPassword = "";
 	String name = "";
@@ -39,10 +47,12 @@ public class BankService {
 	user.setUsername(savedUsername);
 	user.setPassword(savedPassword);
 	user.setBalance(balance);
+	logger.info("Succesfully gotten user from DB");
 	return user;
     }
 
     public int getBalance(User user) {
+	logger.info("Getting balance");
 	return user.getBalance();
     }
 
@@ -50,6 +60,7 @@ public class BankService {
 	try {
 	    if (amount > 0) {
 		user.setBalance(user.getBalance() + amount);
+		logger.info("Successfully added balance");
 	    }
 	    else {
 		throw new DepositByZeroOrLessException("You have to have money to put money in");
@@ -57,27 +68,36 @@ public class BankService {
 
 	}
 	catch (DepositByZeroOrLessException e) {
-
+	    logger.warn(e);
 	}
     }
 
     public void widthdraw(User user, int widthdraw) {
 	try {
+	    if (widthdraw < 0) {
+		throw new IllegalWidthdrawlException("Cannot widthdraw negative amount");
+	    }
 	    if (user.getBalance() >= widthdraw) {
 		user.setBalance(user.getBalance() - widthdraw);
+		logger.info("Successfully minus balance");
 	    }
 	    else {
 		throw new InsufficientFundException(
-			"Too broke you need more money in your account");
+			"Too broke, you need more money in your account");
 	    }
 	}
+	catch (IllegalWidthdrawlException e) {
+	    logger.warn(e);
+	}
 	catch (InsufficientFundException e) {
-
+	    logger.warn(e);
 	}
 
     }
 
-    public void logout(User user) {
+    public User logout(User user) {
 	user = null;
+	logger.info("User does not exist anymore and logged off");
+	return user;
     }
 }

@@ -1,5 +1,7 @@
 package com.revature;
 
+import org.apache.log4j.Logger;
+
 import com.revature.controller.BankController;
 import com.revature.model.User;
 import com.revature.service.BankService;
@@ -14,17 +16,21 @@ public class Main {
 
     public static void main(String[] args) {
 
+	Logger logger = Logger.getLogger(Main.class);
+
 	User user = new User();
 	BankService bankService = new BankService();
 	BankView view = new BankView();
 
 	BankController controller = new BankController(user, bankService, view);
 	controller.login();
-	controller.getBalance();
-	controller.widthdraw();
+
 	controller.getBalance();
 	controller.deposit();
 	controller.getBalance();
+	controller.widthdraw();
+	controller.getBalance();
+
 	controller.logout();
 
     }

@@ -36,10 +36,11 @@ public class BankView {
     }
 
     public void login() {
-	System.out.println("Login Succesfull");
+	System.out.println("Login Succesfully");
     }
 
     public void logout() {
-	System.out.println("logout Succesfull");
+	input.close();
+	System.out.println("logout Succesfully");
     }
 }
