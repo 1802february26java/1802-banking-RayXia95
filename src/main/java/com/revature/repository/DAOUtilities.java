@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DAOUtilities {
 
-    private static final String CONNECTION_USERNAME = "BANK_MANAGER";
+    private static final String CONNECTION_USERNAME = "BANK_DB";
     private static final String CONNECTION_PASSWORD = "p4ssw0rd";
-    private static final String URL = "myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com";
+    private static final String URL = "jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL";
     private static Connection connection;
 
     public static synchronized Connection getConnection() throws SQLException {
