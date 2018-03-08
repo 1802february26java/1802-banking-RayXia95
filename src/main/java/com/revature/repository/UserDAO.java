@@ -10,10 +10,10 @@ public interface UserDAO {
 
     public User getUserByUsername(String username);
 
-    public boolean registerUser(String username, String password, String name, int balance);
+    public boolean registerUser(String username, String password, String name, double balance);
 
     public boolean deleteUser(String username);
 
-    public boolean updateUserBalance(String username, int balance);
+    public boolean updateUserBalance(String username, double balance);
 
 }

@@ -85,7 +85,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean registerUser(String username, String password, String name, int balance) {
+    public boolean registerUser(String username, String password, String name, double balance) {
 	try {
 	    connection = DAOUtilities.getConnection();
 	    String sql = "INSERT INTO USER_DB VALUES(?,?,?,?)";
@@ -93,13 +93,23 @@ public class UserDAOImpl implements UserDAO {
 	    int parameterIndex = 0;
 
 	    stmt.setString(++parameterIndex, username);
+	    stmt.setString(++parameterIndex, password);
+	    stmt.setString(++parameterIndex, name);
+	    stmt.setDouble(parameterIndex, balance);
+
+	    if (stmt.executeUpdate() != 0) {
+		return true;
+	    }
+	    else {
+		return false;
+	    }
 
 	}
 	catch (SQLException e) {
-
+	    logger.error("Could not register user", e);
 	}
 	finally {
-
+	    closeResources();
 	}
 	return false;
     }
@@ -111,7 +121,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public boolean updateUserBalance(String username, int balance) {
+    public boolean updateUserBalance(String username, double balance) {
 	// TODO Auto-generated method stub
 	return false;
     }
