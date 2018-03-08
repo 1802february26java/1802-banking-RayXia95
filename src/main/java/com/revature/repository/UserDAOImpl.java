@@ -51,6 +51,7 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUserByUsername(String username) {
+	User user = null;
 	try {
 	    connection = DAOUtilities.getConnection();
 	    String sql = "SELECT * FROM User WHERE U_USERNAME = ?";
@@ -61,7 +62,7 @@ public class UserDAOImpl implements UserDAO {
 	    ResultSet rs = stmt.executeQuery();
 
 	    if (rs.next()) {
-		User user = new User();
+		user = new User();
 		user.setUsername(rs.getString("U_USERNAME)"));
 		user.setPassword(rs.getString("U_PASSWORD"));
 		user.setName(rs.getString("U_NAME"));
