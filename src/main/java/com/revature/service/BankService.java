@@ -1,53 +1,44 @@
 package com.revature.service;
 
+import java.sql.SQLException;
+
 import org.apache.log4j.Logger;
 
 import com.revature.exception.DepositByZeroOrLessException;
 import com.revature.exception.IllegalWidthdrawlException;
 import com.revature.exception.InsufficientFundException;
-import com.revature.exception.InvalidCredentials;
 import com.revature.model.User;
+import com.revature.repository.UserDAOImpl;
 
 public class BankService {
 
     private static final Logger logger = Logger.getLogger(BankService.class);
 
-    public void authenicateUser(User user, String username, String password) {
-	try {
-	    if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-		logger.info("Username and password is correct. User validated");
-	    }
-	    else {
-		throw new InvalidCredentials("Username or password is incorrect");
-	    }
-	}
-	catch (InvalidCredentials e) {
-	    logger.error(e);
-	}
-
-    }
-
     public User getUserFromDB(String username, String password) {
 	/**
 	 * SQL to get user
 	 */
-	User user = new User();
-	// String savedUsername = SELECT username FROM User WHERE username="username"
-	// String savedPassword = SELECT password FROM User WHERE password="password"
-	// String name = SELECT name FROM User WHERE username="username"
-	// int balance = SELECT balance FROM User WHERE username="username"
-	// myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com
-	String savedUsername = "";
-	String savedPassword = "";
-	String name = "";
-	double balance = 0;
+	try {
+	    User user = new UserDAOImpl().getUserByUsername(username);
+	    if (user == null) {
+		throw new SQLException();
+	    }
+	    else if (user.getPassword().equals(password)) {
+		logger.info("Successfully gotten user from DB");
+		return user;
+	    }
+	    else {
+		throw new IllegalArgumentException();
+	    }
+	}
+	catch (SQLException e) {
 
-	user.setName(name);
-	user.setUsername(savedUsername);
-	user.setPassword(savedPassword);
-	user.setBalance(balance);
-	logger.info("Successfully gotten user from DB");
-	return user;
+	    logger.error("Couldn't get user from database");
+	}
+	catch (IllegalArgumentException d) {
+	    logger.error("Wrong password");
+	}
+	return null;
     }
 
     public double getBalance(User user) {
@@ -81,8 +72,7 @@ public class BankService {
 		logger.info("Successfully minus balance");
 	    }
 	    else {
-		throw new InsufficientFundException(
-			"Too broke, you need more money in your account");
+		throw new InsufficientFundException("Too broke, you need more money in your account");
 	    }
 	}
 	catch (IllegalWidthdrawlException e) {

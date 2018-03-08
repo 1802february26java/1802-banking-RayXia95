@@ -2,9 +2,31 @@ package com.revature.view;
 
 import java.util.Scanner;
 
+import com.revature.model.User;
+
 public class BankView {
 
     private Scanner input = new Scanner(System.in);
+
+    public User register() {
+	User user = new User();
+	try {
+	    System.out.println("Please enter a username");
+	    user.setUsername(input.nextLine());
+	    System.out.println("Please enter a password");
+	    user.setPassword(input.nextLine());
+	    System.out.println("Please enter a name");
+	    user.setName(input.nextLine());
+	    System.out.println("Please enter current deposit");
+	    user.setBalance(input.nextDouble());
+	}
+	catch (IllegalArgumentException e) {
+	    System.out.println("Username taken");
+	    e.printStackTrace();
+	}
+	return user;
+
+    }
 
     public String getUsername() {
 	System.out.println("Please enter your username ");

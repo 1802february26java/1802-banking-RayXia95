@@ -7,10 +7,13 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.revature.model.User;
 
 public class UserDAOImpl implements UserDAO {
 
+    private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
     private Connection connection = null;
     private PreparedStatement stmt = null;
 
@@ -20,7 +23,7 @@ public class UserDAOImpl implements UserDAO {
 
 	try {
 	    connection = DAOUtilities.getConnection();
-	    String sql = "SELECT * FROM Users";
+	    String sql = "SELECT * FROM USER_DB";
 	    stmt = connection.prepareStatement(sql);
 
 	    ResultSet rs = stmt.executeQuery();
@@ -40,12 +43,13 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 	catch (SQLException e) {
-	    e.printStackTrace();
+	    logger.error("Could not get all users", e);
 	}
 	finally {
+	    logger.info("Resources Closed");
 	    closeResources();
 	}
-
+	logger.info("Got all my Users");
 	return users;
     }
 
@@ -54,7 +58,7 @@ public class UserDAOImpl implements UserDAO {
 	User user = null;
 	try {
 	    connection = DAOUtilities.getConnection();
-	    String sql = "SELECT * FROM User WHERE U_USERNAME = ?";
+	    String sql = "SELECT * FROM USER_DB WHERE U_USERNAME = ?";
 	    stmt = connection.prepareStatement(sql);
 
 	    stmt.setString(1, username);
@@ -82,7 +86,21 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean registerUser(String username, String password, String name, int balance) {
-	// TODO Auto-generated method stub
+	try {
+	    connection = DAOUtilities.getConnection();
+	    String sql = "INSERT INTO USER_DB VALUES(?,?,?,?)";
+	    stmt = connection.prepareStatement(sql);
+	    int parameterIndex = 0;
+
+	    stmt.setString(++parameterIndex, username);
+
+	}
+	catch (SQLException e) {
+
+	}
+	finally {
+
+	}
 	return false;
     }
 

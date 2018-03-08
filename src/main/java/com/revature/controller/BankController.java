@@ -20,6 +20,10 @@ public class BankController {
 	logger.info("Initialized Controller");
     }
 
+    public void register() {
+	user = bankView.register();
+    }
+
     public void widthdraw() {
 	bankService.widthdraw(user, bankView.widthdraw());
 	logger.info("withdrew money");
@@ -36,9 +40,8 @@ public class BankController {
     }
 
     public void login() {
-	bankService.authenicateUser(
-		bankService.getUserFromDB(user.getUsername(), user.getPassword()),
-		bankView.getUsername(), bankView.getPassword());
+	// try catch possibly
+	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
 	bankView.login();
 	logger.info("Successfully logged in");
     }
