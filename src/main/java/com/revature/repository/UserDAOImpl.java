@@ -11,31 +11,28 @@ import com.revature.model.User;
 
 public class UserDAOImpl implements UserDAO {
 
-    Connection connection = null; // Our connection to the database
-    PreparedStatement stmt = null; // We use prepared statements to help protect against SQL injection
+    private Connection connection = null;
+    private PreparedStatement stmt = null;
 
     @Override
     public List<User> getAllUser() {
 	List<User> users = new ArrayList<>();
 
 	try {
-	    connection = DAOUtilities.getConnection(); // Get our database connection from the manager
-	    String sql = "SELECT * FROM Users"; // Our SQL query
-	    stmt = connection.prepareStatement(sql); // Creates the prepared statement from the query
+	    connection = DAOUtilities.getConnection();
+	    String sql = "SELECT * FROM Users";
+	    stmt = connection.prepareStatement(sql);
 
-	    ResultSet rs = stmt.executeQuery(); // Queries the database
+	    ResultSet rs = stmt.executeQuery();
 
-	    // So long as the ResultSet actually contains results...
 	    while (rs.next()) {
-		// We need to populate a Book object with info for each row from our query result
 		User user = new User();
 
-		// Each variable in our Book object maps to a column in a row from our results.
 		user.setUsername(rs.getString("U_USERNAME)"));
 		user.setPassword(rs.getString("U_PASSWORD"));
 		user.setName(rs.getString("U_NAME"));
 		user.setBalance(rs.getDouble("U_BALANCE"));
-		// Finally we add it to the list of Book objects returned by this query.
+
 		users.add(user);
 	    }
 
@@ -48,13 +45,12 @@ public class UserDAOImpl implements UserDAO {
 	finally {
 	    closeResources();
 	}
+
 	return users;
     }
 
     @Override
     public User getUserByUsername(String username) {
-	User user = null;
-
 	try {
 	    connection = DAOUtilities.getConnection();
 	    String sql = "SELECT * FROM User WHERE U_USERNAME = ?";
@@ -65,7 +61,7 @@ public class UserDAOImpl implements UserDAO {
 	    ResultSet rs = stmt.executeQuery();
 
 	    if (rs.next()) {
-		user = new User();
+		User user = new User();
 		user.setUsername(rs.getString("U_USERNAME)"));
 		user.setPassword(rs.getString("U_PASSWORD"));
 		user.setName(rs.getString("U_NAME"));
