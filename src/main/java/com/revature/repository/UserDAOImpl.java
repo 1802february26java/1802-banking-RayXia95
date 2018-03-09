@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 
+import com.revature.exception.InvalidCredentialsException;
 import com.revature.model.User;
 
 public class UserDAOImpl implements UserDAO {
@@ -76,6 +77,9 @@ public class UserDAOImpl implements UserDAO {
 	catch (SQLException e) {
 	    logger.error("Could not get user by username", e);
 	}
+	catch (InvalidCredentialsException n) {
+	    logger.error("Wrong password", n);
+	}
 	return null;
     }
 
@@ -97,6 +101,7 @@ public class UserDAOImpl implements UserDAO {
 
 	    if (stmt.executeUpdate() != 0) {
 		logger.info("Was able to register user");
+		connection.commit();
 		return true;
 	    }
 	    else {

@@ -17,8 +17,7 @@ public class BankService {
     }
 
     public User getUserFromDB(String username, String password) {
-	User user = new User();
-	user = new UserDAOImpl().getUserByUsername(username);
+	User user = new UserDAOImpl().getUserByUsername(username);
 	try {
 	    if (user.getPassword().equals(password)) {
 		logger.info("Successfully gotten user from DB");
@@ -46,35 +45,47 @@ public class BankService {
 		logger.info("Successfully added balance");
 	    }
 	    else {
-		throw new DepositByZeroOrLessException("You have to have money to put money in");
+		throw new DepositByZeroOrLessException();
 	    }
 
 	}
 	catch (DepositByZeroOrLessException e) {
-	    logger.error(e);
+	    logger.error("You have to have money to put money in", e);
 	}
     }
 
     public void widthdraw(User user, double widthdraw) {
 	try {
 	    if (widthdraw < 0) {
-		throw new IllegalWidthdrawlException("Cannot widthdraw negative amount");
+		throw new IllegalWidthdrawlException();
 	    }
 	    if (user.getBalance() >= widthdraw) {
 		new UserDAOImpl().updateUserBalance(user.getUsername(), (getBalance(user) - widthdraw));
 		logger.info("Successfully minus balance");
 	    }
 	    else {
-		throw new InsufficientFundException("Too broke, you need more money in your account");
+		throw new InsufficientFundException();
 	    }
 	}
 	catch (IllegalWidthdrawlException e) {
-	    logger.error(e);
+	    logger.error("Cannot widthdraw negative amount", e);
 	}
 	catch (InsufficientFundException e) {
-	    logger.error(e);
+	    logger.error("Too broke, you need more money in your account", e);
 	}
 
+    }
+
+    public void homepage(String userDecision, User user) {
+	switch (userDecision) {
+	    case "register":
+
+	    case "login":
+
+		break;
+	    default:
+		break;
+	}
     }
 
     public User logout(User user) {

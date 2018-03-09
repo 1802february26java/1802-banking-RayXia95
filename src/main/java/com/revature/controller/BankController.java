@@ -15,11 +15,13 @@ public class BankController {
 
     public BankController() {
 	logger.info("Initialized Controller");
+	//bankService.homepage(bankView.homepage(), );
     }
 
     public void register() {
-	bankService.registerUser(bankView.register());
 	logger.info("Registered user");
+	bankService.registerUser(bankView.register());
+
     }
 
     public void widthdraw() {
@@ -38,9 +40,7 @@ public class BankController {
     }
 
     public void login() {
-	String username = bankView.getUsername();
-	String password = bankView.getPassword();
-	user = bankService.getUserFromDB(username, password);
+	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
 	bankView.login();
 	logger.info("Successfully logged in");
     }

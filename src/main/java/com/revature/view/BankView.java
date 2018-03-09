@@ -10,22 +10,23 @@ public class BankView {
 
     public User register() {
 	User user = new User();
-	try {
-	    System.out.println("Please enter a username");
-	    user.setUsername(input.next());
-	    System.out.println("Please enter a password");
-	    user.setPassword(input.next());
-	    System.out.println("Please enter a name");
-	    user.setName(input.next());
-	    System.out.println("Please enter current deposit");
-	    user.setBalance(input.nextDouble());
-	    System.out.println("User has been registered");
-	}
-	catch (IllegalArgumentException e) {
-	    System.out.println("Username taken");
-	    e.printStackTrace();
-	}
+	System.out.println("You are registering a user");
+	System.out.println("Please enter a username");
+	user.setUsername(input.next());
+	System.out.println("Please enter a password");
+	user.setPassword(input.next());
+	System.out.println("Please enter a name");
+	user.setName(input.next());
+	System.out.println("Please enter current deposit");
+	user.setBalance(input.nextDouble());
+	System.out.println("User has been registered");
 	return user;
+    }
+
+    public String homepage() {
+	System.out.println("Hello Sir or Mam");
+	System.out.println("Would you like to register or login");
+	return input.next().toLowerCase();
     }
 
     public String getUsername() {
