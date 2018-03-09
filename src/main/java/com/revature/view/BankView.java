@@ -53,10 +53,6 @@ public class BankView {
 	return input.nextInt();
     }
 
-    public void invalidCredentials() {
-	System.out.println("Invalid Credentials please try again");
-    }
-
     public void login() {
 	System.out.println("Login Succesfully");
     }

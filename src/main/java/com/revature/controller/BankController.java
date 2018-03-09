@@ -8,20 +8,18 @@ import com.revature.view.BankView;
 
 public class BankController {
 
-    private User user;
-    private BankView bankView;
-    private BankService bankService;
+    private User user = new User();
+    private BankView bankView = new BankView();
+    private BankService bankService = new BankService();
     private static final Logger logger = Logger.getLogger(BankController.class);
 
-    public BankController(User user, BankService bankService, BankView bankView) {
-	this.user = user;
-	this.bankService = bankService;
-	this.bankView = bankView;
+    public BankController() {
 	logger.info("Initialized Controller");
     }
 
     public void register() {
-	user = bankView.register();
+	bankService.registerUser(bankView.register());
+	logger.info("Registered user");
     }
 
     public void widthdraw() {
