@@ -135,8 +135,26 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public boolean updateUserBalance(String username, double balance) {
-	// TODO Auto-generated method stub
+
+	try (Connection connection = DAOUtilities.getConnection()) {
+	    String sql = "UPDATE USER_DB SET U_BALANCE = ? WHERE U_USERNAME = ?";
+	    PreparedStatement stmt = connection.prepareStatement(sql);
+	    int parameterIndex = 0;
+
+	    stmt.setDouble(++parameterIndex, balance);
+	    stmt.setString(++parameterIndex, username);
+
+	    if (stmt.executeUpdate() != 0) {
+		logger.info("Was able to update balance");
+		return true;
+	    }
+	    else {
+		return false;
+	    }
+	}
+	catch (SQLException e) {
+	    logger.error("Could not update balance", e);
+	}
 	return false;
     }
-
 }

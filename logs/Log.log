@@ -144,3 +144,4 @@ java.sql.SQLSyntaxErrorException: ORA-00936: missing expression
 2018-03-08 20:24:19 INFO  UserDAOImpl:47 - Got all my Users
 2018-03-08 20:24:20 INFO  UserDAOImpl:116 - Got my connection
 2018-03-08 20:24:20 INFO  UserDAOImpl:123 - Was able to delete user
+2018-03-08 20:33:04 INFO  UserDAOImpl:148 - Was able to update balance
