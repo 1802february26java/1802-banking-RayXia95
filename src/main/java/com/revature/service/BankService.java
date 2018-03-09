@@ -14,10 +14,11 @@ public class BankService {
 
     private static final Logger logger = Logger.getLogger(BankService.class);
 
+    public void registerUser(User user) {
+	new UserDAOImpl().registerUser(user.getUsername(), user.getPassword(), user.getName(), user.getBalance());
+    }
+
     public User getUserFromDB(String username, String password) {
-	/**
-	 * SQL to get user
-	 */
 	try {
 	    User user = new UserDAOImpl().getUserByUsername(username);
 	    if (user == null) {
@@ -32,7 +33,6 @@ public class BankService {
 	    }
 	}
 	catch (SQLException e) {
-
 	    logger.error("Couldn't get user from database");
 	}
 	catch (IllegalArgumentException d) {
@@ -42,14 +42,14 @@ public class BankService {
     }
 
     public double getBalance(User user) {
-	logger.info("Getting balance");
-	return user.getBalance();
+	logger.info("Got balance");
+	return new UserDAOImpl().getUserByUsername(user.getUsername()).getBalance();
     }
 
     public void deposit(User user, double amount) {
 	try {
 	    if (amount > 0) {
-		user.setBalance(user.getBalance() + amount);
+		new UserDAOImpl().updateUserBalance(user.getUsername(), (getBalance(user) + amount));
 		logger.info("Successfully added balance");
 	    }
 	    else {
@@ -68,7 +68,7 @@ public class BankService {
 		throw new IllegalWidthdrawlException("Cannot widthdraw negative amount");
 	    }
 	    if (user.getBalance() >= widthdraw) {
-		user.setBalance(user.getBalance() - widthdraw);
+		new UserDAOImpl().updateUserBalance(user.getUsername(), (getBalance(user) - widthdraw));
 		logger.info("Successfully minus balance");
 	    }
 	    else {
