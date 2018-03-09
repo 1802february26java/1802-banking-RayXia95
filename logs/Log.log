@@ -63,3 +63,84 @@ java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevature
 	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
 	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:24)
 2018-03-08 10:12:02 INFO  DAOUtilities:32 - Got my connection
+2018-03-08 19:57:27 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 19:57:29 ERROR UserDAOImpl:108 - Could not register user
+java.sql.SQLSyntaxErrorException: ORA-01950: no privileges on tablespace 'USERS'
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:98)
+	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:126)
+2018-03-08 20:06:57 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 20:06:57 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 20:09:36 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 20:09:36 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 20:09:36 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 20:09:36 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 20:09:37 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 20:09:37 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 20:10:21 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:10:22 ERROR UserDAOImpl:44 - Could not get all users
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.UserDAOImpl.getAllUser(UserDAOImpl.java:32)
+	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:126)
+2018-03-08 20:10:22 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:15:48 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:15:49 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:16:01 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:16:01 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:16:11 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:16:11 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:16:40 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:16:41 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:16:41 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 20:16:41 ERROR UserDAOImpl:77 - Could not get user by username
+java.sql.SQLException: Invalid column name
+	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
+	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
+	at com.revature.repository.UserDAOImpl.getUserByUsername(UserDAOImpl.java:66)
+	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:130)
+2018-03-08 20:18:29 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:18:29 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:18:30 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 20:18:30 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-08 20:23:40 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:23:40 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:23:41 INFO  UserDAOImpl:116 - Got my connection
+2018-03-08 20:23:41 ERROR UserDAOImpl:131 - Could not delete user
+java.sql.SQLSyntaxErrorException: ORA-00936: missing expression
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.deleteUser(UserDAOImpl.java:122)
+	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:147)
+2018-03-08 20:24:19 TRACE UserDAOImpl:23 - Got my connection
+2018-03-08 20:24:19 INFO  UserDAOImpl:47 - Got all my Users
+2018-03-08 20:24:20 INFO  UserDAOImpl:116 - Got my connection
+2018-03-08 20:24:20 INFO  UserDAOImpl:123 - Was able to delete user

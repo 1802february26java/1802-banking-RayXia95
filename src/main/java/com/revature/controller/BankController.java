@@ -40,7 +40,6 @@ public class BankController {
     }
 
     public void login() {
-	// try catch possibly
 	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
 	bankView.login();
 	logger.info("Successfully logged in");
