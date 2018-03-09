@@ -1,7 +1,5 @@
 package com.revature.service;
 
-import java.sql.SQLException;
-
 import org.apache.log4j.Logger;
 
 import com.revature.exception.DepositByZeroOrLessException;
@@ -19,12 +17,10 @@ public class BankService {
     }
 
     public User getUserFromDB(String username, String password) {
+	User user = new User();
+	user = new UserDAOImpl().getUserByUsername(username);
 	try {
-	    User user = new UserDAOImpl().getUserByUsername(username);
-	    if (user == null) {
-		throw new SQLException();
-	    }
-	    else if (user.getPassword().equals(password)) {
+	    if (user.getPassword().equals(password)) {
 		logger.info("Successfully gotten user from DB");
 		return user;
 	    }
@@ -32,11 +28,8 @@ public class BankService {
 		throw new IllegalArgumentException();
 	    }
 	}
-	catch (SQLException e) {
-	    logger.error("Couldn't get user from database");
-	}
-	catch (IllegalArgumentException d) {
-	    logger.error("Wrong password");
+	catch (IllegalArgumentException e) {
+	    logger.error("Wrong password", e);
 	}
 	return null;
     }

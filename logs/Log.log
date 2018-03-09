@@ -1,295 +1,33 @@
-2018-03-06 17:31:47 INFO  BankController:20 - Initialized Controller
-2018-03-06 17:31:47 INFO  BankService:49 - Successfully gotten user from DB
-2018-03-06 17:31:52 INFO  BankService:18 - Username and password is correct. User validated
-2018-03-06 17:31:52 INFO  BankController:43 - Successfully logged in
-2018-03-06 17:31:52 INFO  BankService:54 - Getting balance
-2018-03-06 17:31:52 INFO  BankController:30 - Got balance of account
-2018-03-06 17:31:54 INFO  BankService:62 - Successfully added balance
-2018-03-06 17:31:54 INFO  BankController:35 - Deposited money in bank account
-2018-03-06 17:31:54 INFO  BankService:54 - Getting balance
-2018-03-06 17:31:54 INFO  BankController:30 - Got balance of account
-2018-03-06 17:31:56 INFO  BankService:81 - Successfully minus balance
-2018-03-06 17:31:56 INFO  BankController:25 - withdrew money
-2018-03-06 17:31:56 INFO  BankService:54 - Getting balance
-2018-03-06 17:31:56 INFO  BankController:30 - Got balance of account
-2018-03-06 17:31:56 INFO  BankService:99 - User does not exist anymore and logged off
-2018-03-06 17:31:56 INFO  BankController:49 - Successfully logged out
-2018-03-08 09:17:56 ERROR DAOUtilities:45 - SQL EXCEPTED
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:27)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:42)
-2018-03-08 09:18:33 ERROR DAOUtilities:35 - SQL EXCEPTED
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:32)
-2018-03-08 09:21:29 ERROR DAOUtilities:35 - SQL EXCEPTED
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:32)
-2018-03-08 09:23:06 ERROR DAOUtilities:35 - SQL EXCEPTED
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:32)
-2018-03-08 09:35:33 ERROR DAOUtilities:27 - SQL EXCEPTED
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:24)
-2018-03-08 09:38:16 ERROR DAOUtilities:27 - SQL Excepted. no connection
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:24)
-2018-03-08 09:38:16 ERROR DAOUtilities:27 - SQL Excepted. no connection
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:24)
-2018-03-08 09:40:53 ERROR DAOUtilities:27 - SQL Excepted. no connection
-java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@myrevaturerds.cyjl3lot33bp.us-east-1.rds.amazonaws.com:1521:ORCL
-	at java.sql.DriverManager.getConnection(DriverManager.java:689)
-	at java.sql.DriverManager.getConnection(DriverManager.java:247)
-	at com.revature.repository.DAOUtilities.getConnection(DAOUtilities.java:18)
-	at com.revature.repository.DAOUtilities.main(DAOUtilities.java:24)
-2018-03-08 10:12:02 INFO  DAOUtilities:32 - Got my connection
-2018-03-08 19:57:27 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 19:57:29 ERROR UserDAOImpl:108 - Could not register user
-java.sql.SQLSyntaxErrorException: ORA-01950: no privileges on tablespace 'USERS'
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
-	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:98)
-	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:126)
-2018-03-08 20:06:57 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 20:06:57 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 20:09:36 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 20:09:36 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 20:09:36 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 20:09:36 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 20:09:37 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 20:09:37 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 20:10:21 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:10:22 ERROR UserDAOImpl:44 - Could not get all users
-java.sql.SQLException: Invalid column name
-	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
-	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
-	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
-	at com.revature.repository.UserDAOImpl.getAllUser(UserDAOImpl.java:32)
-	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:126)
-2018-03-08 20:10:22 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:15:48 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:15:49 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:16:01 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:16:01 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:16:11 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:16:11 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:16:40 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:16:41 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:16:41 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 20:16:41 ERROR UserDAOImpl:77 - Could not get user by username
-java.sql.SQLException: Invalid column name
-	at oracle.jdbc.driver.OracleStatement.getColumnIndex(OracleStatement.java:3965)
-	at oracle.jdbc.driver.InsensitiveScrollableResultSet.findColumn(InsensitiveScrollableResultSet.java:299)
-	at oracle.jdbc.driver.GeneratedResultSet.getString(GeneratedResultSet.java:1460)
-	at com.revature.repository.UserDAOImpl.getUserByUsername(UserDAOImpl.java:66)
-	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:130)
-2018-03-08 20:18:29 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:18:29 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:18:30 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 20:18:30 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 20:23:40 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:23:40 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:23:41 INFO  UserDAOImpl:116 - Got my connection
-2018-03-08 20:23:41 ERROR UserDAOImpl:131 - Could not delete user
-java.sql.SQLSyntaxErrorException: ORA-00936: missing expression
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
-	at com.revature.repository.UserDAOImpl.deleteUser(UserDAOImpl.java:122)
-	at com.revature.repository.UserDAOImpl.main(UserDAOImpl.java:147)
-2018-03-08 20:24:19 TRACE UserDAOImpl:23 - Got my connection
-2018-03-08 20:24:19 INFO  UserDAOImpl:47 - Got all my Users
-2018-03-08 20:24:20 INFO  UserDAOImpl:116 - Got my connection
-2018-03-08 20:24:20 INFO  UserDAOImpl:123 - Was able to delete user
-2018-03-08 20:33:04 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:11:36 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:11:37 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:11:37 INFO  BankService:28 - Successfully gotten user from DB
-2018-03-08 21:11:37 INFO  BankController:50 - Successfully logged in
-2018-03-08 21:11:37 INFO  BankService:46 - Got balance
-2018-03-08 21:11:37 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:11:37 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:11:37 INFO  BankController:39 - Got balance of account
-2018-03-08 21:11:41 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:11:41 INFO  BankService:54 - Successfully added balance
-2018-03-08 21:11:41 INFO  BankController:44 - Deposited money in bank account
-2018-03-08 21:11:41 INFO  BankService:46 - Got balance
-2018-03-08 21:11:42 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:11:42 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:11:42 INFO  BankController:39 - Got balance of account
-2018-03-08 21:11:48 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:11:48 INFO  BankService:73 - Successfully minus balance
-2018-03-08 21:11:48 INFO  BankController:34 - withdrew money
-2018-03-08 21:11:48 INFO  BankService:46 - Got balance
-2018-03-08 21:11:48 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:11:48 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:11:48 INFO  BankController:39 - Got balance of account
-2018-03-08 21:11:48 INFO  BankService:90 - User does not exist anymore and logged off
-2018-03-08 21:11:48 INFO  BankController:56 - Successfully logged out
-2018-03-08 21:16:13 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:13 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:13 INFO  BankService:28 - Successfully gotten user from DB
-2018-03-08 21:16:13 INFO  BankController:50 - Successfully logged in
-2018-03-08 21:16:13 INFO  BankService:46 - Got balance
-2018-03-08 21:16:14 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:14 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:14 INFO  BankController:39 - Got balance of account
-2018-03-08 21:16:17 INFO  BankService:46 - Got balance
-2018-03-08 21:16:17 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:17 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:18 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:16:18 INFO  BankService:54 - Successfully added balance
-2018-03-08 21:16:18 INFO  BankController:44 - Deposited money in bank account
-2018-03-08 21:16:18 INFO  BankService:46 - Got balance
-2018-03-08 21:16:18 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:18 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:18 INFO  BankController:39 - Got balance of account
-2018-03-08 21:16:22 INFO  BankService:46 - Got balance
-2018-03-08 21:16:22 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:22 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:22 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:16:22 INFO  BankService:73 - Successfully minus balance
-2018-03-08 21:16:22 INFO  BankController:34 - withdrew money
-2018-03-08 21:16:22 INFO  BankService:46 - Got balance
-2018-03-08 21:16:23 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:16:23 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:16:23 INFO  BankController:39 - Got balance of account
-2018-03-08 21:16:23 INFO  BankService:90 - User does not exist anymore and logged off
-2018-03-08 21:16:23 INFO  BankController:56 - Successfully logged out
-2018-03-08 21:17:24 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:17:52 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:17:53 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 21:17:53 INFO  BankController:23 - Registered user
-2018-03-08 21:17:59 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:17:59 ERROR BankService:37 - Couldn't get user from database
-2018-03-08 21:17:59 INFO  BankController:44 - Successfully logged in
-2018-03-08 21:17:59 INFO  BankService:46 - Got balance
-2018-03-08 21:18:42 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:19:04 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:19:04 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 21:19:04 INFO  BankController:23 - Registered user
-2018-03-08 21:19:12 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:19:12 ERROR BankService:37 - Couldn't get user from database
-2018-03-08 21:19:12 INFO  BankController:44 - Successfully logged in
-2018-03-08 21:19:12 INFO  BankService:46 - Got balance
-2018-03-08 21:22:56 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:23:23 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:23:23 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 21:23:23 INFO  BankController:23 - Registered user
-2018-03-08 21:24:49 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:25:07 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:25:07 ERROR UserDAOImpl:108 - Could not register user
-java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.PK_USERNAME) violated
-
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
-	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
-	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
-	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
-	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
-	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
-	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
-	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
-	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
-	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
-	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
-	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:98)
-	at com.revature.service.BankService.registerUser(BankService.java:18)
-	at com.revature.controller.BankController.register(BankController.java:22)
-	at com.revature.Main.main(Main.java:18)
-2018-03-08 21:25:07 INFO  BankController:23 - Registered user
-2018-03-08 21:25:33 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:25:34 ERROR BankService:37 - Couldn't get user from database
-2018-03-08 21:25:34 INFO  BankController:44 - Successfully logged in
-2018-03-08 21:25:34 INFO  BankService:46 - Got balance
-2018-03-08 21:27:32 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:27:44 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:44 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:44 INFO  BankService:28 - Successfully gotten user from DB
-2018-03-08 21:27:44 INFO  BankController:46 - Successfully logged in
-2018-03-08 21:27:44 INFO  BankService:46 - Got balance
-2018-03-08 21:27:45 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:45 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:45 INFO  BankController:33 - Got balance of account
-2018-03-08 21:27:48 INFO  BankService:46 - Got balance
-2018-03-08 21:27:48 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:48 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:49 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:27:49 INFO  BankService:54 - Successfully added balance
-2018-03-08 21:27:49 INFO  BankController:38 - Deposited money in bank account
-2018-03-08 21:27:49 INFO  BankService:46 - Got balance
-2018-03-08 21:27:49 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:49 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:49 INFO  BankController:33 - Got balance of account
-2018-03-08 21:27:53 INFO  BankService:46 - Got balance
-2018-03-08 21:27:54 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:54 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:54 INFO  UserDAOImpl:148 - Was able to update balance
-2018-03-08 21:27:54 INFO  BankService:73 - Successfully minus balance
-2018-03-08 21:27:54 INFO  BankController:28 - withdrew money
-2018-03-08 21:27:54 INFO  BankService:46 - Got balance
-2018-03-08 21:27:54 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:27:54 INFO  UserDAOImpl:70 - Got my user by username
-2018-03-08 21:27:54 INFO  BankController:33 - Got balance of account
-2018-03-08 21:27:54 INFO  BankService:90 - User does not exist anymore and logged off
-2018-03-08 21:27:54 INFO  BankController:52 - Successfully logged out
-2018-03-08 21:28:09 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:28:29 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:28:29 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 21:28:29 INFO  BankController:23 - Registered user
-2018-03-08 21:28:36 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:28:36 ERROR BankService:37 - Couldn't get user from database
-2018-03-08 21:28:36 INFO  BankController:46 - Successfully logged in
-2018-03-08 21:28:36 INFO  BankService:46 - Got balance
-2018-03-08 21:37:28 INFO  BankController:17 - Initialized Controller
-2018-03-08 21:37:54 INFO  UserDAOImpl:86 - Got my connection
-2018-03-08 21:37:54 INFO  UserDAOImpl:99 - Was able to register user
-2018-03-08 21:37:54 INFO  BankController:22 - Registered user
-2018-03-08 21:38:03 INFO  UserDAOImpl:55 - Got my connection
-2018-03-08 21:38:03 ERROR BankService:36 - Couldn't get user from database
-2018-03-08 21:38:03 INFO  BankController:43 - Successfully logged in
-2018-03-08 21:38:03 INFO  BankService:45 - Got balance
+2018-03-08 21:45:47 INFO  BankController:17 - Initialized Controller
+2018-03-08 21:46:09 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 21:46:09 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 21:46:09 INFO  BankController:22 - Registered user
+2018-03-08 21:46:15 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 21:46:15 ERROR BankService:36 - Couldn't get user from database
+2018-03-08 21:46:15 INFO  BankController:43 - Successfully logged in
+2018-03-08 21:46:15 INFO  BankService:45 - Got balance
+2018-03-08 21:50:25 INFO  BankController:17 - Initialized Controller
+2018-03-08 21:50:45 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 21:50:46 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 21:50:46 INFO  BankController:22 - Registered user
+2018-03-08 21:50:49 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 21:53:21 INFO  BankController:17 - Initialized Controller
+2018-03-08 21:53:33 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 21:53:33 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 21:53:33 INFO  BankController:22 - Registered user
+2018-03-08 21:53:40 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 21:56:30 INFO  BankController:17 - Initialized Controller
+2018-03-08 21:56:47 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 21:56:47 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 21:56:48 INFO  BankController:22 - Registered user
+2018-03-08 21:56:50 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 21:58:06 INFO  BankController:17 - Initialized Controller
+2018-03-08 21:58:20 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 21:58:20 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 21:58:20 INFO  BankController:22 - Registered user
+2018-03-08 21:58:23 INFO  UserDAOImpl:55 - Got my connection
+2018-03-08 22:00:00 INFO  BankController:17 - Initialized Controller
+2018-03-08 22:00:27 INFO  UserDAOImpl:86 - Got my connection
+2018-03-08 22:00:28 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-08 22:00:28 INFO  BankController:22 - Registered user
+2018-03-08 22:01:05 INFO  UserDAOImpl:55 - Got my connection

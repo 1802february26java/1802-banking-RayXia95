@@ -38,7 +38,9 @@ public class BankController {
     }
 
     public void login() {
-	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
+	String username = bankView.getUsername();
+	String password = bankView.getPassword();
+	user = bankService.getUserFromDB(username, password);
 	bankView.login();
 	logger.info("Successfully logged in");
     }
