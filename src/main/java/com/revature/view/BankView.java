@@ -12,11 +12,11 @@ public class BankView {
 	User user = new User();
 	try {
 	    System.out.println("Please enter a username");
-	    user.setUsername(input.nextLine());
+	    user.setUsername(input.next());
 	    System.out.println("Please enter a password");
-	    user.setPassword(input.nextLine());
+	    user.setPassword(input.next());
 	    System.out.println("Please enter a name");
-	    user.setName(input.nextLine());
+	    user.setName(input.next());
 	    System.out.println("Please enter current deposit");
 	    user.setBalance(input.nextDouble());
 	    System.out.println("User has been registered");
@@ -48,9 +48,9 @@ public class BankView {
 	return input.nextDouble();
     }
 
-    public int deposit() {
+    public double deposit() {
 	System.out.println("Please enter how much you want to deposit: ");
-	return input.nextInt();
+	return input.nextDouble();
     }
 
     public void login() {
