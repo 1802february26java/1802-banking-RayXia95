@@ -19,23 +19,23 @@ public class BankView {
 	    user.setName(input.nextLine());
 	    System.out.println("Please enter current deposit");
 	    user.setBalance(input.nextDouble());
+	    System.out.println("User has been registered");
 	}
 	catch (IllegalArgumentException e) {
 	    System.out.println("Username taken");
 	    e.printStackTrace();
 	}
 	return user;
-
     }
 
     public String getUsername() {
 	System.out.println("Please enter your username ");
-	return input.nextLine();
+	return input.next();
     }
 
     public String getPassword() {
 	System.out.println("Please enter your password ");
-	return input.nextLine();
+	return input.next();
     }
 
     public void getBalance(double d) {
@@ -43,9 +43,9 @@ public class BankView {
 	System.out.println(d);
     }
 
-    public int widthdraw() {
+    public double widthdraw() {
 	System.out.println("Please enter how much you want to widthdraw: ");
-	return input.nextInt();
+	return input.nextDouble();
     }
 
     public int deposit() {
