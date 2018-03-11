@@ -15,7 +15,6 @@ public class BankController {
 
     public BankController() {
 	logger.info("Initialized Controller");
-	//bankService.homepage(bankView.homepage(), );
     }
 
     public void register() {
@@ -40,8 +39,8 @@ public class BankController {
     }
 
     public void login() {
-	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
 	bankView.login();
+	user = bankService.getUserFromDB(bankView.getUsername(), bankView.getPassword());
 	logger.info("Successfully logged in");
     }
 

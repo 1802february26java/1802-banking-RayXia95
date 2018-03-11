@@ -19,14 +19,7 @@ public class BankView {
 	user.setName(input.next());
 	System.out.println("Please enter current deposit");
 	user.setBalance(input.nextDouble());
-	System.out.println("User has been registered");
 	return user;
-    }
-
-    public String homepage() {
-	System.out.println("Hello Sir or Mam");
-	System.out.println("Would you like to register or login");
-	return input.next().toLowerCase();
     }
 
     public String getUsername() {
@@ -55,7 +48,7 @@ public class BankView {
     }
 
     public void login() {
-	System.out.println("Login Succesfully");
+	System.out.println("Please login");
     }
 
     public void logout() {

@@ -27,15 +27,24 @@ public class BankService {
 		throw new IllegalArgumentException();
 	    }
 	}
+	catch (NullPointerException e) {
+	    logger.error("Could not get user by username, username does not exists");
+	}
 	catch (IllegalArgumentException e) {
-	    logger.error("Wrong password", e);
+	    logger.error("Wrong password");
 	}
 	return null;
     }
 
     public double getBalance(User user) {
 	logger.info("Got balance");
-	return new UserDAOImpl().getUserByUsername(user.getUsername()).getBalance();
+	try {
+	    return new UserDAOImpl().getUserByUsername(user.getUsername()).getBalance();
+	}
+	catch (NullPointerException e) {
+	    logger.error("No balance with the account");
+	}
+	return 0;
     }
 
     public void deposit(User user, double amount) {
@@ -50,7 +59,10 @@ public class BankService {
 
 	}
 	catch (DepositByZeroOrLessException e) {
-	    logger.error("You have to have money to put money in", e);
+	    logger.error("You have to have money to put money in");
+	}
+	catch (NullPointerException e) {
+	    logger.error("Can't put balance to a non existing account");
 	}
     }
 
@@ -68,24 +80,15 @@ public class BankService {
 	    }
 	}
 	catch (IllegalWidthdrawlException e) {
-	    logger.error("Cannot widthdraw negative amount", e);
+	    logger.error("Cannot widthdraw negative amount");
 	}
-	catch (InsufficientFundException e) {
-	    logger.error("Too broke, you need more money in your account", e);
+	catch (InsufficientFundException d) {
+	    logger.error("Too broke, you need more money in your account");
+	}
+	catch (NullPointerException f) {
+	    logger.error("Cannot widthdraw from an existing account");
 	}
 
-    }
-
-    public void homepage(String userDecision, User user) {
-	switch (userDecision) {
-	    case "register":
-
-	    case "login":
-
-		break;
-	    default:
-		break;
-	}
     }
 
     public User logout(User user) {
