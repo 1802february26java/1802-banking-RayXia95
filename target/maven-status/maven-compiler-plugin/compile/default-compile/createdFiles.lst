@@ -1,11 +1,11 @@
+com\revature\view\BankView.class
+com\revature\controller\BankController.class
+com\revature\repository\DAOUtilities.class
+com\revature\repository\UserDAOImpl.class
 com\revature\repository\UserDAO.class
 com\revature\model\User.class
-com\revature\view\BankView.class
 com\revature\exception\DepositByZeroOrLessException.class
-com\revature\controller\BankController.class
 com\revature\exception\IllegalWidthdrawlException.class
 com\revature\exception\InsufficientFundException.class
 com\revature\service\BankService.class
-com\revature\repository\DAOUtilities.class
 com\revature\Main.class
-com\revature\repository\UserDAOImpl.class
