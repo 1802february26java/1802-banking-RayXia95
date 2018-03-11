@@ -31,7 +31,6 @@ public class BankTesting {
 	assertEquals(userTest, bankService.getUserFromDB("Admin", "admin"));
     }
 
-    @SuppressWarnings("deprecation")
     @Test
     public void testBalance() {
 	assertEquals(null, bankService.logout(userTest));
