@@ -35,4 +35,12 @@ public class BankTesting {
     public void testBalance() {
 	assertEquals(null, bankService.logout(userTest));
     }
+
+    @Test
+    public void registerUser() {
+	User user = new User("bleh", "1802", "ray", 0);
+	bankService.registerUser(user);
+	assertEquals(user, bankService.getUserFromDB("bleh", "1802"));
+	userDAO.deleteUser("bleh");
+    }
 }

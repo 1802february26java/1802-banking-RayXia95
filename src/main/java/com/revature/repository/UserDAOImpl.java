@@ -117,7 +117,7 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 	catch (SQLException e) {
-	    logger.error("Could not register user, username existed");
+	    logger.error("Could not register user, username existed", e);
 	}
 	return false;
     }
