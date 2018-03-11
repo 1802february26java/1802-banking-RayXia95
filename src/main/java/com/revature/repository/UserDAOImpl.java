@@ -15,6 +15,15 @@ public class UserDAOImpl implements UserDAO {
 
     private static final Logger logger = Logger.getLogger(UserDAOImpl.class);
 
+    private static UserDAOImpl userDAO = new UserDAOImpl();
+
+    private UserDAOImpl() {
+    }
+
+    public static UserDAOImpl getUserDAO() {
+	return userDAO;
+    }
+
     @Override
     public List<User> getAllUser() {
 	List<User> users = new ArrayList<>();

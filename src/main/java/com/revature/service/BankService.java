@@ -13,11 +13,12 @@ public class BankService {
     private static final Logger logger = Logger.getLogger(BankService.class);
 
     public void registerUser(User user) {
-	new UserDAOImpl().registerUser(user.getUsername(), user.getPassword(), user.getName(), user.getBalance());
+	UserDAOImpl.getUserDAO().registerUser(user.getUsername(), user.getPassword(), user.getName(),
+		user.getBalance());
     }
 
     public User getUserFromDB(String username, String password) {
-	User user = new UserDAOImpl().getUserByUsername(username);
+	User user = UserDAOImpl.getUserDAO().getUserByUsername(username);
 	try {
 	    if (user.getPassword().equals(password)) {
 		logger.info("Successfully gotten user from DB");
@@ -39,7 +40,7 @@ public class BankService {
     public double getBalance(User user) {
 	logger.info("Got balance");
 	try {
-	    return new UserDAOImpl().getUserByUsername(user.getUsername()).getBalance();
+	    return UserDAOImpl.getUserDAO().getUserByUsername(user.getUsername()).getBalance();
 	}
 	catch (NullPointerException e) {
 	    logger.error("No balance with the account");
@@ -50,7 +51,7 @@ public class BankService {
     public void deposit(User user, double amount) {
 	try {
 	    if (amount > 0) {
-		new UserDAOImpl().updateUserBalance(user.getUsername(), (getBalance(user) + amount));
+		UserDAOImpl.getUserDAO().updateUserBalance(user.getUsername(), (getBalance(user) + amount));
 		logger.info("Successfully added balance");
 	    }
 	    else {
@@ -72,7 +73,7 @@ public class BankService {
 		throw new IllegalWidthdrawlException();
 	    }
 	    if (user.getBalance() >= widthdraw) {
-		new UserDAOImpl().updateUserBalance(user.getUsername(), (getBalance(user) - widthdraw));
+		UserDAOImpl.getUserDAO().updateUserBalance(user.getUsername(), (getBalance(user) - widthdraw));
 		logger.info("Successfully minus balance");
 	    }
 	    else {
