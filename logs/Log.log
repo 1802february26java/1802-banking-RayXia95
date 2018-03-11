@@ -1,0 +1,377 @@
+2018-03-09 11:55:30 INFO  BankController:17 - Initialized Controller
+2018-03-09 11:55:59 INFO  UserDAOImpl:86 - Got my connection
+2018-03-09 11:56:00 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-09 11:56:00 INFO  BankController:22 - Registered user
+2018-03-09 11:56:05 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 11:57:38 INFO  BankController:17 - Initialized Controller
+2018-03-09 11:57:51 INFO  UserDAOImpl:86 - Got my connection
+2018-03-09 11:57:52 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-09 11:57:52 INFO  BankController:22 - Registered user
+2018-03-09 11:58:07 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:00:16 INFO  BankController:17 - Initialized Controller
+2018-03-09 12:00:32 INFO  UserDAOImpl:86 - Got my connection
+2018-03-09 12:00:32 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-09 12:00:32 INFO  BankController:22 - Registered user
+2018-03-09 12:00:40 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:00:40 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:00:40 INFO  BankService:24 - Successfully gotten user from DB
+2018-03-09 12:00:40 INFO  BankController:45 - Successfully logged in
+2018-03-09 12:00:40 INFO  BankService:38 - Got balance
+2018-03-09 12:00:40 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:00:40 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:00:40 INFO  BankController:32 - Got balance of account
+2018-03-09 12:00:52 INFO  BankService:38 - Got balance
+2018-03-09 12:00:52 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:00:52 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:00:52 INFO  UserDAOImpl:148 - Was able to update balance
+2018-03-09 12:00:52 INFO  BankService:46 - Successfully added balance
+2018-03-09 12:00:52 INFO  BankController:37 - Deposited money in bank account
+2018-03-09 12:00:52 INFO  BankService:38 - Got balance
+2018-03-09 12:00:52 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:00:52 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:00:52 INFO  BankController:32 - Got balance of account
+2018-03-09 12:01:49 INFO  BankController:17 - Initialized Controller
+2018-03-09 12:02:03 INFO  UserDAOImpl:86 - Got my connection
+2018-03-09 12:02:03 INFO  UserDAOImpl:99 - Was able to register user
+2018-03-09 12:02:03 INFO  BankController:22 - Registered user
+2018-03-09 12:02:10 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:10 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:10 INFO  BankService:24 - Successfully gotten user from DB
+2018-03-09 12:02:10 INFO  BankController:45 - Successfully logged in
+2018-03-09 12:02:10 INFO  BankService:38 - Got balance
+2018-03-09 12:02:10 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:10 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:10 INFO  BankController:32 - Got balance of account
+2018-03-09 12:02:14 INFO  BankService:38 - Got balance
+2018-03-09 12:02:15 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:15 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:15 INFO  UserDAOImpl:148 - Was able to update balance
+2018-03-09 12:02:15 INFO  BankService:46 - Successfully added balance
+2018-03-09 12:02:15 INFO  BankController:37 - Deposited money in bank account
+2018-03-09 12:02:15 INFO  BankService:38 - Got balance
+2018-03-09 12:02:15 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:15 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:15 INFO  BankController:32 - Got balance of account
+2018-03-09 12:02:19 INFO  BankService:38 - Got balance
+2018-03-09 12:02:19 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:19 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:19 INFO  UserDAOImpl:148 - Was able to update balance
+2018-03-09 12:02:19 INFO  BankService:65 - Successfully minus balance
+2018-03-09 12:02:19 INFO  BankController:27 - withdrew money
+2018-03-09 12:02:19 INFO  BankService:38 - Got balance
+2018-03-09 12:02:19 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 12:02:19 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 12:02:19 INFO  BankController:32 - Got balance of account
+2018-03-09 12:02:19 INFO  BankService:82 - User does not exist anymore and logged off
+2018-03-09 12:02:19 INFO  BankController:51 - Successfully logged out
+2018-03-09 15:57:33 INFO  BankController:17 - Initialized Controller
+2018-03-09 15:57:59 INFO  UserDAOImpl:86 - Got my connection
+2018-03-09 15:58:00 ERROR UserDAOImpl:108 - Could not register user
+java.sql.SQLDataException: ORA-01438: value larger than specified precision allowed for this column
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:98)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:21)
+	at com.revature.Main.main(Main.java:16)
+2018-03-09 15:58:00 INFO  BankController:22 - Registered user
+2018-03-09 15:58:07 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:20 INFO  BankController:17 - Initialized Controller
+2018-03-09 16:00:34 INFO  UserDAOImpl:89 - Got my connection
+2018-03-09 16:00:34 INFO  UserDAOImpl:102 - Was able to register user
+2018-03-09 16:00:34 INFO  BankController:22 - Registered user
+2018-03-09 16:00:40 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:40 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:40 INFO  BankService:23 - Successfully gotten user from DB
+2018-03-09 16:00:40 INFO  BankController:43 - Successfully logged in
+2018-03-09 16:00:40 INFO  BankService:37 - Got balance
+2018-03-09 16:00:40 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:40 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:40 INFO  BankController:32 - Got balance of account
+2018-03-09 16:00:44 INFO  BankService:37 - Got balance
+2018-03-09 16:00:44 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:44 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:44 INFO  UserDAOImpl:151 - Was able to update balance
+2018-03-09 16:00:44 INFO  BankService:45 - Successfully added balance
+2018-03-09 16:00:44 INFO  BankController:37 - Deposited money in bank account
+2018-03-09 16:00:44 INFO  BankService:37 - Got balance
+2018-03-09 16:00:44 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:44 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:44 INFO  BankController:32 - Got balance of account
+2018-03-09 16:00:49 INFO  BankService:37 - Got balance
+2018-03-09 16:00:49 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:49 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:49 INFO  UserDAOImpl:151 - Was able to update balance
+2018-03-09 16:00:49 INFO  BankService:64 - Successfully minus balance
+2018-03-09 16:00:49 INFO  BankController:27 - withdrew money
+2018-03-09 16:00:49 INFO  BankService:37 - Got balance
+2018-03-09 16:00:50 INFO  UserDAOImpl:55 - Got my connection
+2018-03-09 16:00:50 INFO  UserDAOImpl:70 - Got my user by username
+2018-03-09 16:00:50 INFO  BankController:32 - Got balance of account
+2018-03-09 16:00:50 INFO  BankService:81 - User does not exist anymore and logged off
+2018-03-09 16:00:50 INFO  BankController:49 - Successfully logged out
+2018-03-09 16:02:40 INFO  BankController:17 - Initialized Controller
+2018-03-09 16:03:01 INFO  UserDAOImpl:90 - Got my connection
+2018-03-09 16:03:02 ERROR UserDAOImpl:112 - Could not register user
+java.sql.SQLDataException: ORA-01438: value larger than specified precision allowed for this column
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:102)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:21)
+	at com.revature.Main.main(Main.java:16)
+2018-03-09 16:03:02 INFO  BankController:22 - Registered user
+2018-03-09 16:03:12 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:21 INFO  BankController:17 - Initialized Controller
+2018-03-09 16:04:34 INFO  UserDAOImpl:90 - Got my connection
+2018-03-09 16:04:34 INFO  UserDAOImpl:103 - Was able to register user
+2018-03-09 16:04:34 ERROR UserDAOImpl:113 - Could not register user
+java.sql.SQLException: Could not commit with auto-commit set on
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4443)
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4490)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:104)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:21)
+	at com.revature.Main.main(Main.java:16)
+2018-03-09 16:04:34 INFO  BankController:22 - Registered user
+2018-03-09 16:04:47 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:47 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:47 INFO  BankService:23 - Successfully gotten user from DB
+2018-03-09 16:04:47 INFO  BankController:43 - Successfully logged in
+2018-03-09 16:04:47 INFO  BankService:37 - Got balance
+2018-03-09 16:04:48 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:48 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:48 INFO  BankController:32 - Got balance of account
+2018-03-09 16:04:52 INFO  BankService:37 - Got balance
+2018-03-09 16:04:52 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:52 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:52 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-09 16:04:52 INFO  BankService:45 - Successfully added balance
+2018-03-09 16:04:52 INFO  BankController:37 - Deposited money in bank account
+2018-03-09 16:04:52 INFO  BankService:37 - Got balance
+2018-03-09 16:04:52 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:52 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:52 INFO  BankController:32 - Got balance of account
+2018-03-09 16:04:55 INFO  BankService:37 - Got balance
+2018-03-09 16:04:55 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:55 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:55 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-09 16:04:55 INFO  BankService:64 - Successfully minus balance
+2018-03-09 16:04:55 INFO  BankController:27 - withdrew money
+2018-03-09 16:04:55 INFO  BankService:37 - Got balance
+2018-03-09 16:04:55 INFO  UserDAOImpl:56 - Got my connection
+2018-03-09 16:04:55 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-09 16:04:55 INFO  BankController:32 - Got balance of account
+2018-03-09 16:04:55 INFO  BankService:81 - User does not exist anymore and logged off
+2018-03-09 16:04:55 INFO  BankController:49 - Successfully logged out
+2018-03-11 17:08:42 INFO  BankController:17 - Initialized Controller
+2018-03-11 17:08:42 INFO  BankController:21 - Registered user
+2018-03-11 17:08:58 INFO  UserDAOImpl:90 - Got my connection
+2018-03-11 17:08:58 INFO  UserDAOImpl:103 - Was able to register user
+2018-03-11 17:08:58 ERROR UserDAOImpl:113 - Could not register user
+java.sql.SQLException: Could not commit with auto-commit set on
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4443)
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4490)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:104)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:22)
+	at com.revature.Main.main(Main.java:16)
+2018-03-11 17:09:04 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:04 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:04 INFO  BankService:23 - Successfully gotten user from DB
+2018-03-11 17:09:04 INFO  BankController:44 - Successfully logged in
+2018-03-11 17:09:04 INFO  BankService:37 - Got balance
+2018-03-11 17:09:04 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:04 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:04 INFO  BankController:33 - Got balance of account
+2018-03-11 17:09:11 INFO  BankService:37 - Got balance
+2018-03-11 17:09:11 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:11 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:12 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-11 17:09:12 INFO  BankService:45 - Successfully added balance
+2018-03-11 17:09:12 INFO  BankController:38 - Deposited money in bank account
+2018-03-11 17:09:12 INFO  BankService:37 - Got balance
+2018-03-11 17:09:12 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:12 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:12 INFO  BankController:33 - Got balance of account
+2018-03-11 17:09:16 INFO  BankService:37 - Got balance
+2018-03-11 17:09:16 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:16 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:16 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-11 17:09:17 INFO  BankService:64 - Successfully minus balance
+2018-03-11 17:09:17 INFO  BankController:28 - withdrew money
+2018-03-11 17:09:17 INFO  BankService:37 - Got balance
+2018-03-11 17:09:17 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:17 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:17 INFO  BankController:33 - Got balance of account
+2018-03-11 17:09:17 INFO  BankService:81 - User does not exist anymore and logged off
+2018-03-11 17:09:17 INFO  BankController:50 - Successfully logged out
+2018-03-11 17:09:34 INFO  BankController:17 - Initialized Controller
+2018-03-11 17:09:34 INFO  BankController:21 - Registered user
+2018-03-11 17:09:46 INFO  UserDAOImpl:90 - Got my connection
+2018-03-11 17:09:46 ERROR UserDAOImpl:113 - Could not register user
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.PK_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:102)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:22)
+	at com.revature.Main.main(Main.java:16)
+2018-03-11 17:09:54 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:54 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:54 INFO  BankService:23 - Successfully gotten user from DB
+2018-03-11 17:09:54 INFO  BankController:44 - Successfully logged in
+2018-03-11 17:09:54 INFO  BankService:37 - Got balance
+2018-03-11 17:09:54 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:54 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:54 INFO  BankController:33 - Got balance of account
+2018-03-11 17:09:56 INFO  BankService:37 - Got balance
+2018-03-11 17:09:57 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:57 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:57 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-11 17:09:57 INFO  BankService:45 - Successfully added balance
+2018-03-11 17:09:57 INFO  BankController:38 - Deposited money in bank account
+2018-03-11 17:09:57 INFO  BankService:37 - Got balance
+2018-03-11 17:09:57 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:09:57 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:09:57 INFO  BankController:33 - Got balance of account
+2018-03-11 17:09:59 INFO  BankService:37 - Got balance
+2018-03-11 17:10:00 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:10:00 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:10:00 INFO  UserDAOImpl:153 - Was able to update balance
+2018-03-11 17:10:00 INFO  BankService:64 - Successfully minus balance
+2018-03-11 17:10:00 INFO  BankController:28 - withdrew money
+2018-03-11 17:10:00 INFO  BankService:37 - Got balance
+2018-03-11 17:10:00 INFO  UserDAOImpl:56 - Got my connection
+2018-03-11 17:10:01 INFO  UserDAOImpl:71 - Got my user by username
+2018-03-11 17:10:01 INFO  BankController:33 - Got balance of account
+2018-03-11 17:10:01 INFO  BankService:81 - User does not exist anymore and logged off
+2018-03-11 17:10:01 INFO  BankController:50 - Successfully logged out
+2018-03-11 17:14:10 ERROR UserDAOImpl:113 - Could not register user
+java.sql.SQLException: Could not commit with auto-commit set on
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4443)
+	at oracle.jdbc.driver.PhysicalConnection.commit(PhysicalConnection.java:4490)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:104)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:22)
+	at com.revature.Main.main(Main.java:16)
+2018-03-11 17:16:30 ERROR UserDAOImpl:114 - Could not register user
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.PK_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:102)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:22)
+	at com.revature.Main.main(Main.java:16)
+2018-03-11 17:20:16 ERROR UserDAOImpl:114 - Could not register user
+java.sql.SQLIntegrityConstraintViolationException: ORA-00001: unique constraint (BANK_DB.PK_USERNAME) violated
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:58)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:943)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1075)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3820)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3897)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1361)
+	at com.revature.repository.UserDAOImpl.registerUser(UserDAOImpl.java:102)
+	at com.revature.service.BankService.registerUser(BankService.java:16)
+	at com.revature.controller.BankController.register(BankController.java:22)
+	at com.revature.Main.main(Main.java:16)
+2018-03-11 17:22:17 ERROR BankService:31 - User does not exist inside database
+java.lang.NullPointerException
+	at com.revature.service.BankService.getUserFromDB(BankService.java:22)
+	at com.revature.controller.BankController.login(BankController.java:42)
+	at com.revature.Main.main(Main.java:18)
+2018-03-11 17:26:38 ERROR UserDAOImpl:114 - Could not register user, username existed
+2018-03-11 17:27:42 ERROR UserDAOImpl:111 - Could not register user, username existed
+2018-03-11 17:27:50 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:29:42 ERROR UserDAOImpl:111 - Could not register user, username existed
+2018-03-11 17:29:52 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:29:52 ERROR BankService:45 - No balance with the account
+2018-03-11 17:31:27 ERROR BankService:62 - You have to have money to put money in
+com.revature.exception.DepositByZeroOrLessException
+	at com.revature.service.BankService.deposit(BankService.java:57)
+	at com.revature.controller.BankController.deposit(BankController.java:37)
+	at com.revature.Main.main(Main.java:21)
+2018-03-11 17:31:27 ERROR BankService:45 - No balance with the account
+2018-03-11 17:31:38 ERROR BankService:80 - Cannot widthdraw negative amount
+com.revature.exception.IllegalWidthdrawlException
+	at com.revature.service.BankService.widthdraw(BankService.java:69)
+	at com.revature.controller.BankController.widthdraw(BankController.java:27)
+	at com.revature.Main.main(Main.java:23)
+2018-03-11 17:31:38 ERROR BankService:45 - No balance with the account
+2018-03-11 17:32:47 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:32:47 ERROR BankService:45 - No balance with the account
+2018-03-11 17:35:52 ERROR UserDAOImpl:111 - Could not register user, username existed
+2018-03-11 17:35:59 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:35:59 ERROR BankService:45 - No balance with the account
+2018-03-11 17:36:05 ERROR BankService:65 - Can't to a non existing account
+2018-03-11 17:36:05 ERROR BankService:45 - No balance with the account
+2018-03-11 17:36:16 ERROR BankService:89 - Cannot widthdraw from an existing account
+2018-03-11 17:36:16 ERROR BankService:45 - No balance with the account
+2018-03-11 17:38:14 ERROR UserDAOImpl:111 - Could not register user, username existed
+2018-03-11 17:39:39 ERROR UserDAOImpl:111 - Could not register user, username existed
+2018-03-11 17:39:49 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:39:49 ERROR BankService:45 - No balance with the account
+2018-03-11 17:39:51 ERROR BankService:65 - Can't put balance to a non existing account
+2018-03-11 17:39:51 ERROR BankService:45 - No balance with the account
+2018-03-11 17:39:52 ERROR BankService:89 - Cannot widthdraw from an existing account
+2018-03-11 17:39:52 ERROR BankService:45 - No balance with the account
+2018-03-11 17:40:21 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:40:21 ERROR BankService:45 - No balance with the account
+2018-03-11 17:41:37 ERROR BankService:31 - Could not get user by username, username does not exists
+2018-03-11 17:41:37 ERROR BankService:45 - No balance with the account
